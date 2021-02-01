@@ -9,21 +9,17 @@
 </head>
 
 <body>
+	<input type="text" id="name">
+	<button>Klik og kig i console</button>
+
+
 	<script>
-		let length = 30;
-		let width = 4;
-		let areal = length * width;
-		let result;
+		document.querySelector("button").addEventListener("click", buttonClicked);
 
-		if (areal < 100) {
-			result = "Arealet er for lille";
-		} else if (areal < 200) {
-			result = "Arealet er ok";
-		} else {
-			result = "Arealet er for stort";
+		function buttonClicked() {
+			let userName = document.querySelector("#name").value;
+			console.log(`Tillykke, dit navn er ${userName}`);
 		}
-
-		console.log(result);
 
 	</script>
 </body>
