@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+
+<body>
+
+	<p>Hvor mange timer har du fløjet?</p>
+	<input type="number" id="hours">
+	<button>Klik og beregn CO2, kig i console</button>
+
+
+
+
+
+	<script>
+		document.querySelector("button").addEventListener("click", buttonClicked);
+
+		function buttonClicked() {
+			let hours = document.querySelector("#hours").value;
+			let co2 = document.querySelector("#co2").value;
+
+			let result = `Ved ${hours} timers flyrejse har du udledt ${total(hours,co2)} kg CO2 `
+
+			console.log(result);
+		}
+
+		function total(h, c) {
+			return h * c;
+		}
+
+	</script>
+</body>
+
+</html>
