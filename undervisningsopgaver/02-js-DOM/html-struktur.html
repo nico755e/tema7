@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<style>
+		header {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		h2 {
+			display: block;
+		}
+
+
+		img {
+			width: 100%;
+		}
+
+		section {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-gap: 20px;
+		}
+
+
+
+		footer {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+	</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+	<header>
+		Titel
+
+	</header>
+	<main>
+		<h2>Undertitel</h2>
+		<section>
+
+
+			<article>
+				<h3>Article 1</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="first">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, enim quam sequi minima blanditiis praesentium modi illum reiciendis, ducimus illo dignissimos. Saepe ullam at unde repellendus amet laborum repudiandae expedita?</p>
+			</article>
+
+			<article>
+				<h3>Article 1</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, enim quam sequi minima blanditiis praesentium modi illum reiciendis, ducimus illo dignissimos. Saepe ullam at unde repellendus amet laborum repudiandae expedita?</p>
+			</article>
+
+		</section>
+	</main>
+
+	<footer>This is a footer</footer>
+
+	<script>
+		const titel = document.querySelector("header");
+		console.log(titel);
+
+		titel.textContent = "Billedgalleri";
+		titel.innerHTML = "<h1>Billeder</h1>";
+
+
+		const pic1 = document.querySelector("article img ")
+		console.log(pic1);
+		pic1.alt = "Billede er sjovt"
+
+	</script>
+
+
+</body>
+
+</html>
