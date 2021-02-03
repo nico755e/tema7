@@ -75,31 +75,22 @@
 	<footer>This is a footer</footer>
 
 	<script>
-		const overskrift = document.querySelector("h1");
-		overskrift.textContent = "Nixie er den bedste";
-		console.log(overskrift.textContent);
+		const overskrift1 = document.querySelector("article:nth-child(1) h3");
+		overskrift1.textContent = "Nixie er den bedste";
+		console.log(overskrift1.textContent);
 
-		const article1 = document.querySelector("article:nth-child(1) p")
-		article1.innerHTML = "Lilla er den <b>flotteste</b> farve";
-		console.log(article1.textContent);
+		const para1 = document.querySelector("article:nth-child(1) p")
+		para1.textContent = "Se nu hvor godt det går";
+		console.log(para1.textContent);
 
 
-		//		const undertitel = document.querySelector("h2");
-		//		undertitel.textContent;
-		//		console.log(undertitel.textContent);
-		//
-		//
-		//		const articleName = document.querySelector("article:first-of-type + article");
-		//		articleName.textContent;
-		//		console.log(articleName.textContent);
-		//
-		//		const paragraph = document.querySelector("p");
-		//		paragraph.textContent;
-		//		console.log(paragraph.textContent);
-		//
-		//		const art = document.querySelector("article:nth-child(1)");
-		//		art.textContent;
-		//		console.log(art.textContent);
+		const article2 = document.querySelector("article:first-of-type + article h3")
+		article2.textContent = "Bimbambusse";
+		console.log(article2.textContent);
+
+		const para2 = document.querySelector("article:first-of-type + article p")
+		para2.innerHTML = "Det er fucking sejt og <b>NU</b> virker det jo!";
+		console.log(para2.innerHTML);
 
 	</script>
 
