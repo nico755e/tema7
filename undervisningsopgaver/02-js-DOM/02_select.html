@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<style>
+		header {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		h2 {
+			display: block;
+		}
+
+
+		img {
+			width: 100%;
+		}
+
+		section {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-gap: 20px;
+		}
+
+
+
+		footer {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+	</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+	<header>
+		<h1>Titel</h1>
+
+	</header>
+	<main>
+		<h2>Undertitel</h2>
+		<section>
+
+
+			<article>
+				<h3>Article 1</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="first">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, enim quam sequi minima blanditiis praesentium modi illum reiciendis, ducimus illo dignissimos. Saepe ullam at unde repellendus amet laborum repudiandae expedita?</p>
+			</article>
+
+			<article>
+				<h3>Terrorchefen</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="">
+				<p>Hej med dig jeg er en paragraph. Det her er bare for tydeligere at se hvilken article jeg har fat i.</p>
+			</article>
+
+		</section>
+	</main>
+
+	<footer>This is a footer</footer>
+
+	<script>
+		const overskrift = document.querySelector("h1");
+		overskrift.textContent;
+		console.log(overskrift.textContent);
+
+
+		const undertitel = document.querySelector("h2");
+		undertitel.textContent;
+		console.log(undertitel.textContent);
+
+
+		const articleName = document.querySelector("article:first-of-type + article");
+		articleName.textContent;
+		console.log(articleName.textContent);
+
+		const paragraph = document.querySelector("p");
+		paragraph.textContent;
+		console.log(paragraph.textContent);
+
+		const art = document.querySelector("article:nth-child(1)");
+		art.textContent;
+		console.log(art.textContent);
+
+	</script>
+
+
+</body>
+
+</html>
