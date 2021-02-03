@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<style>
+		header {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		h2 {
+			display: block;
+		}
+
+
+		img {
+			width: 100%;
+		}
+
+		section {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-gap: 20px;
+		}
+
+
+
+		footer {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+	</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+	<header>
+		<h1>Titel</h1>
+
+	</header>
+	<main>
+		<h2>Undertitel</h2>
+		<section>
+
+
+			<article>
+				<h3>Article 1</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="first">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, enim quam sequi minima blanditiis praesentium modi illum reiciendis, ducimus illo dignissimos. Saepe ullam at unde repellendus amet laborum repudiandae expedita?</p>
+			</article>
+
+			<article>
+				<h3>Terrorchefen</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="">
+				<p>Hej med dig jeg er en paragraph. Det her er bare for tydeligere at se hvilken article jeg har fat i.</p>
+			</article>
+
+		</section>
+	</main>
+
+	<footer>This is a footer</footer>
+
+	<script>
+		const pic1 = document.querySelector("article:nth-child(1) img");
+		pic1.src = "img/kat.jpg";
+		pic1.alt = "kat";
+		console.log(pic1);
+
+
+
+		//laver ny section
+		let mainSection = document.querySelector("section");
+		//laver ny article
+		let newArticle = document.createElement("article");
+		//laver ny h3
+		let overskrift = document.createElement("h3");
+		//laver teksten til h3
+		let overskriftTxt = document.createTextNode("Ny overskrift med JavaScript");
+		//opretter billede
+		let newImg = document.createElement("img");
+		//opretter p-tag
+		let paragraph = document.createElement("p");
+		//laver teksten til p-tag
+		let paragraphTxt = document.createTextNode("Det er da ret vildt hvis jeg har fanget det her nu hva?");
+
+
+		//indsætter src + alt-tag til img
+		newImg.src = "img/kat.jpg";
+		newImg.alt = "kat2";
+		//tilføjer teksten til h3
+		overskrift.appendChild(overskriftTxt);
+		//tilføjer h3 til artiklen
+		newArticle.appendChild(overskrift);
+		//tilføjer billede
+		newArticle.appendChild(newImg);
+		//tilføjer teksten til p-tagget
+		paragraph.appendChild(paragraphTxt);
+		//tilføjer p-tag til artiklen
+		newArticle.appendChild(paragraph);
+
+
+
+
+		//opretter det hele til sidst i mainSection
+		mainSection.appendChild(newArticle);
+
+	</script>
+
+
+</body>
+
+</html>
