@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<style>
+		header {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		h2 {
+			display: block;
+		}
+
+
+		img {
+			width: 100%;
+		}
+
+		section {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-gap: 20px;
+		}
+
+
+
+		footer {
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		.boxShadow {
+			box - shadow: 7 px 5 px 14 px 0 px rgba(0, 0, 0, 0.78);
+		}
+
+	</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+	<header>
+		<h1>Titel</h1>
+
+	</header>
+	<main>
+		<h2>Undertitel</h2>
+		<section>
+
+
+			<article>
+				<h3>Article 1</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="first">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, enim quam sequi minima blanditiis praesentium modi illum reiciendis, ducimus illo dignissimos. Saepe ullam at unde repellendus amet laborum repudiandae expedita?</p>
+			</article>
+
+			<article>
+				<h3>Terrorchefen</h3>
+				<img src="https://placeimg.com/400/300/any" alt="billede" class="">
+				<p>Hej med dig jeg er en paragraph. Det her er bare for tydeligere at se hvilken article jeg har fat i.</p>
+			</article>
+
+		</section>
+	</main>
+
+	<footer>This is a footer</footer>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", start);
+
+		function start() {
+			console.log("DOM er loaded");
+
+
+			const pic1 = document.querySelector("article:nth-child(1) img");
+			pic1.src = "img/kat.jpg";
+			pic1.alt = "kat";
+
+
+
+
+			let mainSection = document.querySelector("section");
+			let newArticle = document.createElement("article");
+			let overskrift = document.createElement("h3");
+			let overskriftTxt = document.createTextNode("Ny overskrift med JavaScript");
+			let newImg = document.createElement("img");
+			let paragraph = document.createElement("p");
+			let paragraphTxt = document.createTextNode("Det er da ret vildt hvis jeg har fanget det her nu hva?");
+
+
+			newImg.src = "img/kat.jpg";
+			newImg.alt = "kat2";
+			overskrift.appendChild(overskriftTxt);
+			newArticle.appendChild(overskrift);
+			newArticle.appendChild(newImg);
+			paragraph.appendChild(paragraphTxt);
+			newArticle.appendChild(paragraph);
+
+
+
+			//hører til forrige opgave
+			pic1.addEventListener("click", skiftBillede);
+
+			function skiftBillede() {
+				console.log("skifter billede");
+
+				pic1.src = "img/unicorn.jpg";
+			}
+
+			//opretter det hele til sidst i mainSection
+			mainSection.appendChild(newArticle);
+		}
+		//hører til denne opgave
+
+
+		document.querySelector("article:nth-child(1) img").addEventListener("mouseover", elementOverAndOut);
+		document.querySelector("article:nth-child(1) img").addEventListener("mouseout", elementOverAndOut);
+		document.querySelector("article:nth-child(2) img").addEventListener("mouseover", elementOverAndOut);
+		document.querySelector("article:nth-child(2) img").addEventListener("mouseout", elementOverAndOut);
+		document.querySelector("article:nth-child(3) img").addEventListener("mouseover", elementOverAndOut);
+		document.querySelector("article:nth-child(3) img").addEventListener("mouseout", elementOverAndOut);
+
+
+
+
+		function elementOverAndOut() {
+			console.log("OVER AND OUT");
+			this.classList.toggle("boxShadow");
+		}
+
+	</script>
+
+
+</body>
+
+</html>
