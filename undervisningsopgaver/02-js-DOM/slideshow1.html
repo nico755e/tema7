@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+
+
+	<style>
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<section>
+		<h1>Tro på det....</h1>
+
+		<img src="img/img1.png" alt="first pic">
+
+		<button>Videre</button>
+
+		<p>Billeder brugt med tilladelse af Rasmus Bregnhøj</p>
+
+
+	</section>
+
+
+
+
+
+
+
+	<script>
+		let billeder = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png", ]
+
+		const knap = document.querySelector("button");
+		const billede = document.querySelector("img");
+		let number = 1;
+
+
+		knap.addEventListener("click", skiftBillede);
+
+		function skiftBillede() {
+			console.log("skifter billede");
+
+			billede.src = "img/" + billeder[number];
+
+			if (number <= 6) {
+				number++;
+				knap.textContent = "Videre";
+			} else {
+				knap.textContent = "Forfra";
+				number = 0;
+			}
+
+
+		}
+
+	</script>
+
+</body>
+
+
+</html>
