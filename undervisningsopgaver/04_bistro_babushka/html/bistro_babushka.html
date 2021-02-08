@@ -118,8 +118,10 @@
 				//Tjek hvilken tro personen har og sammenlign med aktuelt filter
 				if (filter == ret.retter || filter == "alle") {
 					const klon = skabelon.cloneNode(true);
-					klon.querySelector(".navn").textContent = ret;
 					klon.querySelector(".billede").src = medieurl + ret.billede;
+					klon.querySelector(".navn").textContent = ret.navn;
+					klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
+					klon.querySelector(".pris").textContent = `Pris: ${ret.pris},-`;
 					dest.appendChild(klon);
 				}
 
