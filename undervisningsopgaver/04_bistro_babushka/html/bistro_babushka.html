@@ -46,24 +46,25 @@
 		<h1>Alle</h1>
 
 		<nav>
-			<button data-retter="alle" class="valgt">Alle</button>
-			<button data-retter="forretter">Forretter</button>
-			<button data-retter="Hovedretter">Hovedretter</button>
-			<button data-retter="Desserter">Desserter</button>
-			<button data-retter="Drikkevarer">Drikkevarer</button>
+			<button data-kategori="alle" class="valgt">Alle</button>
+			<button data-kategori="forretter">Forretter</button>
+			<button data-kategori="hovedretter">Hovedretter</button>
+			<button data-kategori="desserter">Desserter</button>
+			<button data-kategori="drikkevarer">Drikkevarer</button>
 		</nav>
 	</header>
 
 	<section id="liste"></section>
 
 	<template>
-		<article class="ret">
+		<article class="article">
+			<img src="" alt="" class="billede">
 			<h2 class="navn"></h2>
 			<p class="pris"></p>
 			<p class="kortbeskrivelse"></p>
 			<p class="langbeskrivelse"></p>
 			<p class="oprindelsesregion"></p>
-			<img src="" alt="" class="billede">
+
 		</article>
 	</template>
 
@@ -89,7 +90,7 @@
 
 		//eventlistener knyttet til knapperne der vælger hvilken der er aktiv
 		function filtrerRetter() {
-			filter = this.dataset.retter; //sætter filter til værdien af knappen
+			filter = this.dataset.kategori; //sætter filter til værdien af knappen
 			document.querySelector(".valgt").classList.remove("valgt"); //fjern klassen valgt fra den knap
 			this.classList.add("valgt") //marker den knap der er klikket på
 
@@ -113,10 +114,10 @@
 			const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
 			dest.textContent = ""; //ryd container inden ny loop
 			retter.forEach(ret => {
-				console.log("Retter", ret.retter);
+				console.log("Kategori", ret.kategori);
 				// loop igennem json (personer)
 				//Tjek hvilken tro personen har og sammenlign med aktuelt filter
-				if (filter == ret.retter || filter == "alle") {
+				if (filter == ret.kategori || filter == "alle") {
 					const klon = skabelon.cloneNode(true);
 					klon.querySelector(".billede").src = medieurl + ret.billede;
 					klon.querySelector(".navn").textContent = ret.navn;
@@ -124,7 +125,6 @@
 					klon.querySelector(".pris").textContent = `Pris: ${ret.pris},-`;
 					dest.appendChild(klon);
 				}
-
 			})
 		}
 
