@@ -123,9 +123,15 @@
 					klon.querySelector(".navn").textContent = ret.navn;
 					klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
 					klon.querySelector(".pris").textContent = `Pris: ${ret.pris},-`;
+					klon.querySelector(".article").addEventListener("click", () => visDetaljer(ret));
 					dest.appendChild(klon);
 				}
+
 			})
+		}
+
+		function visDetaljer(retten) {
+			location.href = `bistro_detalje.html?id=${retten._id}`;
 		}
 
 	</script>
