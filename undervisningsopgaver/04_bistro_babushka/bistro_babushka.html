@@ -11,10 +11,15 @@
 
 
 	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
 		body {
 			font-family: sans-serif;
 			background-color: ;
-			background-image: url(../../filer/babushka_splash.jpg)
+
 		}
 
 		img {
@@ -36,42 +41,59 @@
 
 		nav {
 			text-align: center;
+			margin-top: 5vh
 		}
 
 		.valgt {
 			background-color: #C70039;
 			color: #fff;
 			font-weight: bold;
-			border: none;
 		}
 
 		header {
-			background-image: url(../filer/babushka_splash.jpg);
+			background-image: url(2-20.jpg);
+			background-size: cover;
+			height: 40vh;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 
 		article {
-			border: solid 1px;
+			border: solid 1px #efb45e;
 			padding: 9px;
+			border-radius: 8px;
 		}
 
 		h1 {
 			font-family: 'Bungee', cursive;
+			text-align: center;
+			padding-top: 13vh;
+			font-size: 2.5rem;
+			color: #000;
 		}
 
-		h2 {
+		.menuh2 {
 			color: #C70039;
 			text-align: center;
+			margin: 5vh 0 -2vh 0;
+			font-size: 2rem
+		}
+
+		.article h2 {
+			color: #C70039;
+			text-align: center;
+			font-size: 1.5rem
 		}
 
 		button {
 			background-color: #0e6617;
-			border: none;
 			color: white;
-			padding: 5px 16px;
+			padding: 5px 14px;
 			text-align: center;
 			text-decoration: none;
 			display: inline-block;
 			font-size: 0.9rem;
+			border-radius: 3px;
 		}
 	</style>
 
@@ -81,7 +103,7 @@
 	<header>
 		<h1>Bistro Babushka</h1>
 
-		<h2>Alle</h2>
+
 
 		<nav>
 			<button data-kategori="alle" class="valgt">Alle</button>
@@ -90,7 +112,12 @@
 			<button data-kategori="desserter">Desserter</button>
 			<button data-kategori="drikkevarer">Drikkevarer</button>
 		</nav>
+
+
+
 	</header>
+
+	<h2 class="menuh2">Alle</h2>
 
 	<section id="liste"></section>
 
@@ -98,7 +125,9 @@
 		<article class="article">
 			<img src="" alt="" class="billede">
 			<h2 class="navn"></h2>
+			</br>
 			<p class="pris"></p>
+			</br>
 			<p class="kortbeskrivelse"></p>
 			<p class="langbeskrivelse"></p>
 			<p class="oprindelsesregion"></p>
